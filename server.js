@@ -9,6 +9,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.get("/api/test", (req, res) => {
+  res.send("API is working 🚀");
+});
 
 // Routes
 const artistRoutes = require('./routes/artistRoutes');
