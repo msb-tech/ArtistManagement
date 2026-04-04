@@ -40,8 +40,7 @@ app.get('/', (req, res) => {
 const MONGODB_URI = process.env.MONGO_URI;
 const PORT = process.env.PORT || 5000;
 
-mongoose
-  .connect(MONGODB_URI)
+mongoose.connect(MONGODB_URI)
   .then(() => {
     console.log('✅ MongoDB connected successfully');
     app.listen(PORT, () => {
